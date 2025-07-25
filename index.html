@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de Números</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Gerador de Números</h2>
+
+        <div class="input-group">
+            <div class="input-field">
+                <label for="min">Mín:</label>
+                <input type="number" name="min" id="min">
+            </div>
+            <div class="input-field">
+                <label for="max">Max:</label>
+                <input type="number" name="max" id="max">
+            </div>
+        </div>
+
+        <button id="generate">Gerar Número</button>
+
+        <div id="result">
+            <span>000</span>
+        </div>
+
+    </div>
+
+    <!--<script type="text/javascript" src="script.js"></script>-->
+
+    <script>
+    
+    const button = document.getElementById('generate');
+
+    button.addEventListener('click', function() {
+        const min = parseInt(document.getElementById('min').value);
+        const max = parseInt(document.getElementById('max').value);
+
+        let result = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        if (isNaN(result)) {
+            result = 'Valor inválido';
+        }
+
+        document.querySelector('#result > span').textContent = result;
+    });
+    </script>
+
+</body>
+</html>
