@@ -65,7 +65,7 @@ body{
     background-color: transparent;
     border: none;
     /*adicionando a linha roxa embaixo*/
-    border-bottom: 2px solid #7336ff;
+    border-bottom: 2px solid #185a9d;
     font-size: 18px;
     border-radius: 2px;
     padding: 5px;
@@ -76,12 +76,13 @@ body{
 /*quando o foco for o input..*/
 .input-field input:focus{
     outline: none;
-    border-bottom: 3px solid #7336ff;
+    /* faz com que o botão fique com um tom de verde mais destacado quando o usuário clica nele */
+    border-bottom: 3px solid #43cea2;
 }
 
 /*trabalhando o botão*/
 #generate{
-    background-color: #7336ff;
+    background-color:#43cea2;
     border: none;
     /*tamanho do botão*/
     padding: 12px 20px;
