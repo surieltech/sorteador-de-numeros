@@ -36,15 +36,24 @@
     button.addEventListener('click', function() {
         const min = parseInt(document.getElementById('min').value);
         const max = parseInt(document.getElementById('max').value);
+        
+        /* adição de um if mais completo que reconhece se os valores mínimo e máximo são coerentes. Consequentemente não permite que faça o sorteio se não houver números e exibe uma mensagem de erro*/
+        if (isNaN(min) || isNaN(max) || min > max) {
+    document.querySelector('#result > span').textContent = 'Valor inválido';
+    return;
+        }
 
         let result = Math.floor(Math.random() * (max - min + 1)) + min;
 
-        if (isNaN(result)) {
-            result = 'Valor inválido';
-        }
+        /* esse é o if usado anteriormente para verificar se havia algum valor coerente/não-nulo registrado para sorteio:
+            if (isNaN(result)) {
+                    result = 'Valor inválido';
+            }
+        */
 
         document.querySelector('#result > span').textContent = result;
     });
+
     </script>
 
 </body>
