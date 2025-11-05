@@ -103,3 +103,125 @@ body{
     font-size: 50px;
     font-weight: 600;
 }
+
+/* ========== MEDIA QUERIES ========== */
+@media (max-width: 768px) {
+    .container{
+        padding: 20px 25px;
+        margin: 10px;
+    }
+    
+    .container h2{
+        font-size: 24px;
+    }
+    
+    .input-group{
+        gap: 25px;
+        padding: 15px 0px;
+    }
+    
+    .input-field{
+        flex: 1 1 150px;
+    }
+    
+    #result{
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    body{
+        padding: 15px;
+        display: block;
+        min-height: calc(100vh - 30px);
+    }
+    
+    .container{
+        padding: 20px;
+        min-width: unset;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .container h2{
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .input-group{
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 0px;
+    }
+    
+    .input-field{
+        flex: 1 1 auto;
+        width: 100%;
+    }
+    
+    .input-field label {
+        font-size: 15px;
+    }
+    
+    .input-field input{
+        font-size: 15px;
+        padding: 10px 5px;
+    }
+    
+    #generate{
+        padding: 14px 20px;
+        margin: 15px 0px;
+        font-size: 15px;
+    }
+    
+    #result{
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 320px) {
+    body{
+        padding: 10px;
+    }
+    
+    .container{
+        padding: 15px;
+    }
+    
+    .container h2{
+        font-size: 20px;
+    }
+    
+    .input-field label {
+        font-size: 14px;
+    }
+    
+    .input-field input{
+        font-size: 14px;
+    }
+    
+    #generate{
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    #result{
+        font-size: 28px;
+    }
+}
+
+/* Para telas muito grandes */
+@media (min-width: 1200px) {
+    .container{
+        padding: 30px 40px;
+        max-width: 500px;
+    }
+    
+    .container h2{
+        font-size: 28px;
+    }
+    
+    #result{
+        font-size: 45px;
+    }
+}
