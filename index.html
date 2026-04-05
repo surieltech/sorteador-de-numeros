@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Sorteador de Números</title>
+    
 </head>
 <body>
     <div class="container">
@@ -13,48 +14,26 @@
         <div class="input-group">
             <div class="input-field">
                 <label for="min">Mín:</label>
-                <input type="number" name="min" id="min">
+                <input type="number" name="min" id="min" value="1" placeholder="1">
             </div>
             <div class="input-field">
                 <label for="max">Max:</label>
-                <input type="number" name="max" id="max">
+                <input type="number" name="max" id="max" value="100" placeholder="100">
             </div>
         </div>
 
-        <button id="generate">Gerar Número</button>
+        <button id="generate">Sortear Número</button>
 
         <div id="result">
             <span>000</span>
         </div>
 
+        <div class="history">
+            <h3>Últimos números sorteados (clique para repetir):</h3>
+            <div id="historyList"></div>
+        </div>
     </div>
 
-    <script>
-    
-    const button = document.getElementById('generate');
-
-    button.addEventListener('click', function() {
-        const min = parseInt(document.getElementById('min').value);
-        const max = parseInt(document.getElementById('max').value);
-        
-        /* adição de um if mais completo que reconhece se os valores mínimo e máximo são coerentes. Consequentemente não permite que faça o sorteio se não houver números e exibe uma mensagem de erro*/
-        if (isNaN(min) || isNaN(max) || min > max) {
-    document.querySelector('#result > span').textContent = 'Valor inválido';
-    return;
-        }
-
-        let result = Math.floor(Math.random() * (max - min + 1)) + min;
-
-        /* esse é o if usado anteriormente para verificar se havia algum valor coerente/não-nulo registrado para sorteio:
-            if (isNaN(result)) {
-                    result = 'Valor inválido';
-            }
-        */
-
-        document.querySelector('#result > span').textContent = result;
-    });
-
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>

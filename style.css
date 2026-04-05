@@ -1,241 +1,282 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        *{
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body{
-    background-color: #121214;
-    width: 100%;
-    min-height: 100vh;
-    /*para centrlizar o container*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        body{
+            background-color: #121214;
+            width: 100%;
+            min-height: 100vh;
+            /*para centrlizar o container*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-.container{
-    background-color: #343439;
-    padding: 30px 40px;
-    min-width: 470px ;
-    color: #efefef;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389); 
-    /*arredondar a tabela*/
-    border-radius: 12px;
-    /*posicionar os elementos no centro*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        .container{
+            background-color: #343439;
+            padding: 30px 40px;
+            min-width: 470px ;
+            color: #efefef;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.389); 
+            /*arredondar a tabela*/
+            border-radius: 12px;
+            /*posicionar os elementos no centro*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.container h2{
-    font-size: 30px;
-    font-weight: 700;
-    /*para fazer o título subir um pouco*/
-    margin-bottom: 20px;
-}
+        .container h2{
+            font-size: 30px;
+            font-weight: 700;
+            /*para fazer o título subir um pouco*/
+            margin-bottom: 20px;
+        }
 
-.input-group{
-    /*display: flex para os inputs ficarem lado a lado*/
-    display: flex;
-    padding: 20px 0px;
-    /*gap pra espaçar eles*/
-    gap: 50px;
-    flex-wrap: wrap; /* Adicionado: permite quebra em telas menores */
-}
+        .input-group{
+            /*display: flex para os inputs ficarem lado a lado*/
+            display: flex;
+            padding: 20px 0px;
+            /*gap pra espaçar eles*/
+            gap: 50px;
+            flex-wrap: wrap; /* Adicionado: permite quebra em telas menores */
+        }
 
-.input-field{
-    /*pra label (min e max) ficar em cima do input*/
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* Adicionado: permite que os inputs cresçam igualmente */
-}
+        .input-field{
+            /*pra label (min e max) ficar em cima do input*/
+            display: flex;
+            flex-direction: column;
+            flex: 1; /* Adicionado: permite que os inputs cresçam igualmente */
+        }
 
-/*para trabalhar na parte da label*/
-.input-field label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
+        /*para trabalhar na parte da label*/
+        .input-field label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
 
-/*trabalhando no campo do input*/
-.input-field input{
-    /*tirando a cor original e as bordas*/
-    background-color: transparent;
-    border: none;
-    /*adicionando a linha roxa embaixo*/
-    border-bottom: 2px solid #185a9d;
-    font-size: 18px;
-    border-radius: 2px;
-    padding: 5px;
-    /*para mudar a cor do número quando eu o digito*/
-    color: #fff;
-}
+        /*trabalhando no campo do input*/
+        .input-field input{
+            /*tirando a cor original e as bordas*/
+            background-color: transparent;
+            border: none;
+            /*adicionando a linha roxa embaixo*/
+            border-bottom: 2px solid #185a9d;
+            font-size: 18px;
+            border-radius: 2px;
+            padding: 5px;
+            /*para mudar a cor do número quando eu o digito*/
+            color: #fff;
+        }
 
-/*quando o foco for o input..*/
-.input-field input:focus{
-    outline: none;
-    /* faz com que o botão fique com um tom de verde mais destacado quando o usuário clica nele */
-    border-bottom: 3px solid #43cea2;
-}
+        /*quando o foco for o input..*/
+        .input-field input:focus{
+            outline: none;
+            /* faz com que o botão fique com um tom de verde mais destacado quando o usuário clica nele */
+            border-bottom: 3px solid #43cea2;
+        }
 
-/*trabalhando o botão*/
-#generate{
-    background-color:#43cea2;
-    border: none;
-    /*tamanho do botão*/
-    padding: 12px 20px;
-    /*arredondando o botão*/
-    border-radius: 4px;
-    /*largura do botão*/
-    width: 100%;
-    margin: 20px 0px;
-    /*alterando a cor da fonte de dentro do botão*/
-    color: #fff;
-    font-weight: bold;
-    /*efeito para quando o cursor passar por cima do botão*/
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Adicionado: transição suave */
-}
+        /*trabalhando o botão*/
+        #generate{
+            background-color:#43cea2;
+            border: none;
+            /*tamanho do botão*/
+            padding: 12px 20px;
+            /*arredondando o botão*/
+            border-radius: 4px;
+            /*largura do botão*/
+            width: 100%;
+            margin: 20px 0px;
+            /*alterando a cor da fonte de dentro do botão*/
+            color: #fff;
+            font-weight: bold;
+            /*efeito para quando o cursor passar por cima do botão*/
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-#generate:hover {
-    background-color: #37a87e; /* Adicionado: efeito hover visual */
-}
+        #generate:hover {
+            background-color: #37a87e;
+            transform: translateY(-2px);
+        }
 
-/*trabalhando a parte dos resultados*/
-#result{
-    font-size: 50px;
-    font-weight: 600;
-    text-align: center; /* Adicionado: centraliza o texto */
-    word-break: break-word; /* Adicionado: quebra números muito longos */
-}
+        #generate:active {
+            transform: translateY(0);
+        }
 
-/* ========== MEDIA QUERIES ========== */
-@media (max-width: 768px) {
-    .container{
-        padding: 20px 25px;
-        margin: 10px;
-        min-width: auto; /* Corrigido: remove largura mínima fixa */
-        width: 90%; /* Adicionado: largura responsiva */
-    }
-    
-    .container h2{
-        font-size: 24px;
-    }
-    
-    .input-group{
-        gap: 25px;
-        padding: 15px 0px;
-    }
-    
-    .input-field{
-        flex: 1 1 150px;
-    }
-    
-    #result{
-        font-size: 35px;
-    }
-}
+        /*trabalhando a parte dos resultados*/
+        #result{
+            font-size: 50px;
+            font-weight: 600;
+            text-align: center;
+            word-break: break-word;
+            margin-bottom: 20px;
+        }
 
-@media (max-width: 480px) {
-    body{
-        padding: 15px;
-        /* Corrigido: mantém o flex ao invés de block */
-        min-height: 100vh;
-    }
-    
-    .container{
-        padding: 20px;
-        min-width: unset;
-        width: 100%;
-        margin: 0 auto;
-    }
-    
-    .container h2{
-        font-size: 22px;
-        margin-bottom: 15px;
-    }
-    
-    .input-group{
-        flex-direction: column;
-        gap: 20px;
-        padding: 10px 0px;
-        width: 100%; /* Adicionado: garante largura total */
-    }
-    
-    .input-field{
-        flex: 1 1 auto;
-        width: 100%;
-    }
-    
-    .input-field label {
-        font-size: 15px;
-    }
-    
-    .input-field input{
-        font-size: 15px;
-        padding: 8px 5px; /* Corrigido: padding mais equilibrado */
-    }
-    
-    #generate{
-        padding: 14px 20px;
-        margin: 15px 0px;
-        font-size: 16px; /* Corrigido: tamanho mais acessível */
-    }
-    
-    #result{
-        font-size: 32px;
-    }
-}
+        #result > span {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
 
-@media (max-width: 320px) {
-    body{
-        padding: 10px;
-    }
-    
-    .container{
-        padding: 15px;
-    }
-    
-    .container h2{
-        font-size: 20px;
-    }
-    
-    .input-field label {
-        font-size: 14px;
-    }
-    
-    .input-field input{
-        font-size: 14px;
-        padding: 8px 5px;
-    }
-    
-    #generate{
-        padding: 12px 15px;
-        font-size: 14px;
-    }
-    
-    #result{
-        font-size: 28px;
-    }
-}
+        /* Estilos para o histórico */
+        .history {
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
 
-/* Para telas muito grandes */
-@media (min-width: 1200px) {
-    .container{
-        padding: 30px 40px;
-        max-width: 600px; /* Corrigido: aumentado para melhor espaçamento */
-        width: 100%; /* Adicionado: garante responsividade */
-    }
-    
-    .container h2{
-        font-size: 32px; /* Corrigido: ligeiramente maior */
-    }
-    
-    #result{
-        font-size: 50px; /* Corrigido: volta ao tamanho original */
-    }
-}
+        .history h3 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            color: #aaa;
+        }
+
+        .history-item {
+            display: inline-block;
+            background-color: #43cea2;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .history-item:hover {
+            background-color: #37a87e;
+            transform: scale(1.05);
+        }
+
+        /* ========== MEDIA QUERIES ========== */
+        @media (max-width: 768px) {
+            .container{
+                padding: 20px 25px;
+                margin: 10px;
+                min-width: auto;
+                width: 90%;
+            }
+            
+            .container h2{
+                font-size: 24px;
+            }
+            
+            .input-group{
+                gap: 25px;
+                padding: 15px 0px;
+            }
+            
+            .input-field{
+                flex: 1 1 150px;
+            }
+            
+            #result{
+                font-size: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body{
+                padding: 15px;
+                min-height: 100vh;
+            }
+            
+            .container{
+                padding: 20px;
+                min-width: unset;
+                width: 100%;
+                margin: 0 auto;
+            }
+            
+            .container h2{
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+            
+            .input-group{
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px 0px;
+                width: 100%;
+            }
+            
+            .input-field{
+                flex: 1 1 auto;
+                width: 100%;
+            }
+            
+            .input-field label {
+                font-size: 15px;
+            }
+            
+            .input-field input{
+                font-size: 15px;
+                padding: 8px 5px;
+            }
+            
+            #generate{
+                padding: 14px 20px;
+                margin: 15px 0px;
+                font-size: 16px;
+            }
+            
+            #result{
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 320px) {
+            body{
+                padding: 10px;
+            }
+            
+            .container{
+                padding: 15px;
+            }
+            
+            .container h2{
+                font-size: 20px;
+            }
+            
+            .input-field label {
+                font-size: 14px;
+            }
+            
+            .input-field input{
+                font-size: 14px;
+                padding: 8px 5px;
+            }
+            
+            #generate{
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+            
+            #result{
+                font-size: 28px;
+            }
+        }
+
+        /* Para telas muito grandes */
+        @media (min-width: 1200px) {
+            .container{
+                padding: 30px 40px;
+                max-width: 600px;
+                width: 100%;
+            }
+            
+            .container h2{
+                font-size: 32px;
+            }
+            
+            #result{
+                font-size: 50px;
+            }
+        }
