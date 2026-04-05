@@ -44,12 +44,14 @@ body{
     padding: 20px 0px;
     /*gap pra espaçar eles*/
     gap: 50px;
+    flex-wrap: wrap; /* Adicionado: permite quebra em telas menores */
 }
 
 .input-field{
     /*pra label (min e max) ficar em cima do input*/
     display: flex;
     flex-direction: column;
+    flex: 1; /* Adicionado: permite que os inputs cresçam igualmente */
 }
 
 /*para trabalhar na parte da label*/
@@ -96,12 +98,19 @@ body{
     font-weight: bold;
     /*efeito para quando o cursor passar por cima do botão*/
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Adicionado: transição suave */
+}
+
+#generate:hover {
+    background-color: #37a87e; /* Adicionado: efeito hover visual */
 }
 
 /*trabalhando a parte dos resultados*/
 #result{
     font-size: 50px;
     font-weight: 600;
+    text-align: center; /* Adicionado: centraliza o texto */
+    word-break: break-word; /* Adicionado: quebra números muito longos */
 }
 
 /* ========== MEDIA QUERIES ========== */
@@ -109,6 +118,8 @@ body{
     .container{
         padding: 20px 25px;
         margin: 10px;
+        min-width: auto; /* Corrigido: remove largura mínima fixa */
+        width: 90%; /* Adicionado: largura responsiva */
     }
     
     .container h2{
@@ -132,8 +143,8 @@ body{
 @media (max-width: 480px) {
     body{
         padding: 15px;
-        display: block;
-        min-height: calc(100vh - 30px);
+        /* Corrigido: mantém o flex ao invés de block */
+        min-height: 100vh;
     }
     
     .container{
@@ -152,6 +163,7 @@ body{
         flex-direction: column;
         gap: 20px;
         padding: 10px 0px;
+        width: 100%; /* Adicionado: garante largura total */
     }
     
     .input-field{
@@ -165,13 +177,13 @@ body{
     
     .input-field input{
         font-size: 15px;
-        padding: 10px 5px;
+        padding: 8px 5px; /* Corrigido: padding mais equilibrado */
     }
     
     #generate{
         padding: 14px 20px;
         margin: 15px 0px;
-        font-size: 15px;
+        font-size: 16px; /* Corrigido: tamanho mais acessível */
     }
     
     #result{
@@ -198,6 +210,7 @@ body{
     
     .input-field input{
         font-size: 14px;
+        padding: 8px 5px;
     }
     
     #generate{
@@ -214,14 +227,15 @@ body{
 @media (min-width: 1200px) {
     .container{
         padding: 30px 40px;
-        max-width: 500px;
+        max-width: 600px; /* Corrigido: aumentado para melhor espaçamento */
+        width: 100%; /* Adicionado: garante responsividade */
     }
     
     .container h2{
-        font-size: 28px;
+        font-size: 32px; /* Corrigido: ligeiramente maior */
     }
     
     #result{
-        font-size: 45px;
+        font-size: 50px; /* Corrigido: volta ao tamanho original */
     }
 }
